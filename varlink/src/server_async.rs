@@ -421,7 +421,7 @@ pub async fn listen_async<S: AsRef<str>, H: AsyncConnectionHandler + 'static>(
 }
 
 /// Handle a single async connection
-async fn handle_connection<H: AsyncConnectionHandler>(
+pub async fn handle_connection<H: AsyncConnectionHandler>(
     mut stream: AsyncStream,
     handler: Arc<H>,
 ) -> Result<()> {
